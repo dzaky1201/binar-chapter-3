@@ -15,15 +15,6 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val bundle = intent.extras
-
-        val name = bundle?.getString("name")
-        val address = bundle?.getString("address")
-
-        binding.txtName.text = name
-        binding.txtAlamat.text = address
-
-
 
 
     }
