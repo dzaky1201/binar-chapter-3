@@ -2,19 +2,20 @@ package com.dzakyhdr.week1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import com.dzakyhdr.week1.databinding.ActivityDetailBinding
 
 
 class DetailActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_detail)
 
+        val data = intent.getStringExtra("name") // ahmad junaedi
+        Log.d("DetailActivity", data.toString())
 
 
     }
