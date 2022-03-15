@@ -15,13 +15,10 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val bundle = intent.extras
+        val person = intent.getSerializableExtra("objek1") as Person
 
-        val name = bundle?.getString("name")
-        val address = bundle?.getString("address")
-
-        binding.txtName.text = name
-        binding.txtAlamat.text = address
+        binding.txtName.text = person.name
+        binding.txtAlamat.text = person.address
 
 
 

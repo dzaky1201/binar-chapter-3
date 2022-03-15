@@ -19,13 +19,10 @@ class MainActivity : AppCompatActivity() {
         binding.button.setOnClickListener {
             val name = binding.edtName.text.toString().trim()
             val address = binding.edtAlamat.text.toString().trim()
+            val person = Person(name, address)
+
             val intent = Intent(this@MainActivity, DetailActivity::class.java)
-            val bundle = Bundle()
-
-            bundle.putString("name", name)
-            bundle.putString("address", address)
-
-            intent.putExtras(bundle)
+            intent.putExtra("objek1", person)
 
             startActivity(intent)
         }
